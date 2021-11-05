@@ -21,9 +21,9 @@ export function TaskList() {
 	}
 
 	function handleCreateNewTask() {
-    if(!newTaskTitle.trim()) {
-      return alert("Não foi possível criar Task. Campo vazio.")
-    }
+		if (!newTaskTitle.trim()) {
+			return alert('Não foi possível criar Task. Campo vazio.');
+		}
 		setTasks([
 			...tasks,
 			{
@@ -32,6 +32,8 @@ export function TaskList() {
 				isComplete: false,
 			},
 		]);
+
+		setNewTaskTitle('');
 	}
 
 	function handleToggleTaskCompletion(id: number) {
